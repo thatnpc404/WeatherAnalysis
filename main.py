@@ -57,7 +57,7 @@ mse_ml=mean_squared_error(actual_observed_values,forecasted_temperatures)
 
 print("Monte Carlo MSE :",mse_ml)
 
-'''
+
 
 #normal plotting with monte carlo values
 
@@ -72,12 +72,12 @@ plt.tight_layout()
 plt.legend(["Forecasted","Actual"],loc="upper right")
 plt.show()
 
-#monte carlo graph code
-# plt.hist(forecasted_temperatures, bins=30, edgecolor='black')
-# plt.title('Monte Carlo Distribution')
-# plt.xlabel('Temperature (°C)')
-# plt.ylabel('Frequency')
-# plt.show()
+monte carlo graph code
+plt.hist(forecasted_temperatures, bins=30, edgecolor='black')
+plt.title('Monte Carlo Distribution')
+plt.xlabel('Temperature (°C)')
+plt.ylabel('Frequency')
+plt.show()
 
 
 
@@ -118,13 +118,10 @@ plt.legend(loc="upper right")
 plt.show()
 
 
-
-
 #Ensembling Monte Carlo(with Linear Regression) and ARIMA
 
 forecast_ml=forecasted_temperatures
 forecast_arima=np.array(forecast)
-
 
 #ensemble predictions
 
@@ -137,4 +134,3 @@ mse_en=mean_squared_error(test_data,ensemble_predictions)
 print(mse_en)
 
 
-'''
